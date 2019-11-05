@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>easy spoiler</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="jqwery.js"></script>
+</head>
+
+<body>
+    <div class="spoiler-title">
+        <span>Spoiler</span>
+        <div class="spoiler-body">
+            <img src="https://cdn.pixabay.com/photo/2018/12/06/21/14/flower-gerbel-3860634_960_720.jpg">
+        </div>
+    </div>
+
+    <div class="spoiler-title">
+        <span>another spoiler</span>
+        <div class="spoiler-body">
+            <img src="https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_960_720.jpg">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.spoiler-body').hide();
+            $(document).on('hide', '.spoiler-body', function () {});
+            $(document).on('toggle', '.spoiler-body', function () {})
+            $(document).on("click", ".spoiler-title", function (event) {
+                $(event.currentTarget).find('.spoiler-body').toggle();
+            });
+
+        });
+    </script>
+</body>
+
+</html>

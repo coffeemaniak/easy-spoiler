@@ -1,0 +1,14 @@
+.spoiler-title {
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+}
+
+.spoiler-title:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+.spoiler-body {
+    display: none;
+}
